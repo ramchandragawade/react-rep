@@ -10,8 +10,8 @@ function App() {
       {/* <DoubleDice maxNum={5}/>
       <DoubleDice maxNum={5}/>
       <DoubleDice maxNum={5}/> */}
-      
-      <ColorList colors= {["red", "pink", "purple", "cyan", "orange"]}/>
+
+      <ColorList colors= {["red", "pink", "purple", "cyan", "orange", "olive","grey","violet"]}/>
     </>
   )
 }
