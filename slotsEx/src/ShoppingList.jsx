@@ -1,14 +1,16 @@
+import ShoppingItem from "./ShoppingItem";
+
 function ShoppingList({items}) {
     return (
         <>
             <ul>
                 {items.map((i,key) => (
-                    <li key={key} style={{ 
-                        textDecoration: i.completed ? 'line-through' : 'red',
-                        color: i.completed ? 'grey':'red'
-                    }}>
-                        {i.item} - {i.qty}
-                    </li>
+                    <ShoppingItem
+                        key={key}
+                        name={i.item}
+                        qty={i.qty}
+                        completed={i.completed}
+                    />
                 ))}
             </ul>
         </>
