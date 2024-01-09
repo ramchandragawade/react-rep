@@ -1,4 +1,5 @@
 import './App.css'
+import BasicForm from './BasicForm';
 import Clicker from './Clicker';
 // import PropertyList from './PropertyList';
 // import ShoppingList from './ShoppingList'
@@ -27,7 +28,8 @@ function App() {
   return (
     // <ShoppingList items = {data}/>
     // <PropertyList properties = {properties}/>
-    <Clicker />
+    <BasicForm />
+    // <Clicker />
   )
 }
 
