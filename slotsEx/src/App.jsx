@@ -1,6 +1,7 @@
 import './App.css'
-import BasicForm from './BasicForm';
-import Clicker from './Clicker';
+// import BasicForm from './BasicForm';
+// import Clicker from './Clicker';
+import ClickerNew from './ClickerNew';
 // import PropertyList from './PropertyList';
 // import ShoppingList from './ShoppingList'
 
@@ -26,10 +27,15 @@ import Clicker from './Clicker';
 function App() {
 
   return (
-    // <ShoppingList items = {data}/>
-    // <PropertyList properties = {properties}/>
+    
+    <div>
+      {/* <ShoppingList items = {data}/>
+    <PropertyList properties = {properties}/>
     <BasicForm />
-    // <Clicker />
+    <Clicker /> */}
+      <ClickerNew msg={'You Clicked me'} btnText={'Click me'}/>
+      <ClickerNew msg={'Do not Click me'} btnText={'DND'}/>
+    </div>
   )
 }
 
