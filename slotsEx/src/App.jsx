@@ -1,5 +1,6 @@
 import './App.css'
-import PropertyList from './PropertyList';
+import Clicker from './Clicker';
+// import PropertyList from './PropertyList';
 // import ShoppingList from './ShoppingList'
 
 // const data = [
@@ -26,6 +27,7 @@ function App() {
   return (
     // <ShoppingList items = {data}/>
     // <PropertyList properties = {properties}/>
+    <Clicker />
   )
 }
 
