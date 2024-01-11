@@ -17,9 +17,12 @@ export default function Counter() {
         // if we want to update the state multiple times
     };
 
+    const setTen = ()=>setCnt(10);
+    console.log('rendered');
     return <div>
         <h2>Counter: {cnt}</h2>
         <button onClick={addOne}>Add one!</button>
         <button onClick={addThree}>Add three!</button>
+        <button onClick={setTen}>Set Ten!</button>
     </div>
 }
