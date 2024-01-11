@@ -1,0 +1,12 @@
+.BoxList {
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.BoxList .Box {
+    display: inline;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
