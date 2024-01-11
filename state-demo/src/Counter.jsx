@@ -2,11 +2,19 @@ import { useState } from "react";
 export default function Counter() {
     const [cnt,setCnt] = useState(0);
     const addOne = () => setCnt(cnt+1);
+    // const addThree = () => {
+    //     setCnt(cnt+1);
+    //     setCnt(cnt+1);
+    //     setCnt(cnt+1);
+    //     // doesn't work
+    // };
+
     const addThree = () => {
-        setCnt(cnt+1);
-        setCnt(cnt+1);
-        setCnt(cnt+1);
-        // doesn't work
+        // when state depends on old state use this approach
+        setCnt(cnt=>cnt+1);
+        setCnt(cnt=>cnt+1);
+        setCnt(cnt=>cnt+1);
+        // if we want to update the state multiple times
     };
 
     return <div>
