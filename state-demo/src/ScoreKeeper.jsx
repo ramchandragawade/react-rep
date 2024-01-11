@@ -3,12 +3,10 @@ import { useState } from "react";
 function ScoreKeeper() {
     const [scores, setScores] = useState({p1:0, p2:0});
     const updateP1 = () => {
-        const newScore = {...scores, p1:scores.p1 + 1};
-        setScores(newScore);
+        setScores((oldScores) => ({...oldScores, p1:oldScores.p1 + 1}));
     }
     const updateP2 = () => {
-        const newScore = {...scores, p2:scores.p + 1};
-        setScores(newScore);
+        setScores((oldScores) => ({...oldScores, p2:oldScores.p2 + 1}));
     }
     console.log();
     return (
