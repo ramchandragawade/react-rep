@@ -1,5 +1,6 @@
 import './App.css'
-import Toggler from './Toggler'
+import ToggleCounter from './ToggleCounter'
+// import Toggler from './Toggler'
 // import Counter from './Counter'
 // import BasicForm from './BasicForm';
 // import Clicker from './Clicker';
@@ -39,7 +40,7 @@ function App() {
       <ClickerNew msg={'Do not Click me'} btnText={'DND'}/> */}
 
       {/* <Counter />       */}
-      <Toggler />
+      <ToggleCounter />
     </div>
   )
 }
