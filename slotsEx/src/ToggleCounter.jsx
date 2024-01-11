@@ -8,7 +8,7 @@ function ToggleCounter() {
         setCnt(cnt+1);
     };
     return <div>
-        <p className="Toggler" onClick={onToggle}> {isHappy === true ? "😊" : "☹️"} </p>
+        <button className="Toggler" onClick={onToggle}> {isHappy === true ? "😊" : "☹️"} </button>
         <p>{cnt}</p>
     </div>
 }
