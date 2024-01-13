@@ -8,7 +8,6 @@ function ScoreKeeper() {
     const updateP2 = () => {
         setScores((oldScores) => ({...oldScores, p2:oldScores.p2 + 1}));
     }
-    console.log();
     return (
         <div>
             <p>Player 1: {scores.p1}</p>
