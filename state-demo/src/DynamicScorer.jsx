@@ -18,8 +18,8 @@ export default function DynamicScore({numPlayers,target}) {
             return s;
         }));
     }
-    return <div style={{textAlign:"start"}}>
-        <ul style={{margin:"5px 0px"}}>
+    return <div>
+        <ul style={{textAlign:"start",margin:"5px 0px"}}>
             {scores.map((score,i)=>{
                 return <li key={i}>
                     Player {i+1}: {score} <button disabled={endgame} onClick={()=>addScore(i)}>+1</button>
@@ -27,6 +27,6 @@ export default function DynamicScore({numPlayers,target}) {
                 </li>
             })}
         </ul>
-        <button onClick={resetScore}>Reset</button>
+        <button onClick={resetScore} style={{width: "75%"}}>Reset</button>
     </div>
 }
