@@ -1,5 +1,6 @@
 import './App.css'
-import ScoreKeeper from './ScoreKeeper'
+import EmojiClicker from './EmojiClicker'
+// import ScoreKeeper from './ScoreKeeper'
 // import Counter from './Counter'
 // import Dumbo from './Dumbo'
 
@@ -10,7 +11,8 @@ function App() {
       {/* <Counter /> */}
 
       {/* <Dumbo/> */}
-      <ScoreKeeper />
+      {/* <ScoreKeeper /> */}
+      <EmojiClicker />
     </>
   )
 }
