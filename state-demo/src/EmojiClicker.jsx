@@ -8,8 +8,7 @@ export default function EmojiClicker () {
         setEmojis((e)=>([...e,{id: uuid(), emoji: getRandomEmoji()}]));
     }
     const removeItem = (id) => {
-        const newArr = emojis.filter(e=>e.id !== id)
-        setEmojis(newArr);
+        setEmojis(e=>e.filter(e=>e.id !== id));
     }
     return <div>
         {emojis.map((itm)=>(<span key={itm.id} onClick={()=>removeItem(itm.id)} style={{fontSize: "4rem", cursor:"pointer"}}>{itm.emoji}</span>))}
