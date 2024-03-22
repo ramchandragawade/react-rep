@@ -1,17 +1,21 @@
 import './App.css'
-import Dice from './Dice'
 import LuckyN from './LuckyN'
-// import Die from './Die'
-// import Lucky7 from './Lucky7'
+import { sum } from './utils'
+
 function App() {
+  function lessThan4 (dice) {
+    return sum(dice) < 4;
+  }
+
+  function sameVals(dice) {
+    return dice.every((v)=> v === dice[0]);
+  }
+
   return (
     <>
-    {/* <Lucky7/> */}
-    {/* <Dice dice={[4,5,6]}/>
-    <Dice dice={[4,5,6]} color={"red"}/>
-    <Dice dice={[4,5,6]}/> */}
-    <LuckyN />
-    <LuckyN numDice={3} goal={10} color={"red"}/>
+    {/* <LuckyN numDice={3} winCheck={lessThan4} color={"red"}/> */}
+    <LuckyN title={"Less Than 4"} numDice={2} winCheck={lessThan4}/>
+    <LuckyN title={"Same values"} numDice={2} winCheck={sameVals} color={"red"}/>
     </>
   )
 }
