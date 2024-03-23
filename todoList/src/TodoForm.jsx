@@ -1,4 +1,4 @@
-import { ListItem, TextField, IconButton,FormHelperText,FormControl, OutlinedInput, InputAdornment } from "@mui/material";
+import { ListItem, IconButton,FormControl, OutlinedInput, InputAdornment, InputLabel } from "@mui/material";
 import { Add } from "@mui/icons-material";
 import { useState } from "react";
 export default function TodoForm({addItem}){
@@ -14,22 +14,21 @@ export default function TodoForm({addItem}){
     return (
         <form onSubmit={handleSubmit}>
             <ListItem style={{ justifyContent: "center" }}>
-                <OutlinedInput
-                    id="outlined-adornment-weight"
-                    placeholder="Add new todo"
-                    onChange={handleChange} value={txt}
-                    endAdornment={<InputAdornment position="end">
-                        <IconButton id="addTodo" aria-label="create todo" type="submit">
-                            <Add />
-                        </IconButton>
-                    </InputAdornment>}
-                    aria-describedby="outlined-weight-helper-text"
-                    inputProps={{
-                        'aria-label': 'weight',
-                    }}
-                />
+                <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+                    <InputLabel htmlFor="todoAdd">New To Do</InputLabel>
+                    <OutlinedInput
+                        id="todoAdd"
+                        type="text"
+                        onChange={handleChange} value={txt}
+                        endAdornment={<InputAdornment position="end">
+                            <IconButton id="addTodo" aria-label="create todo" type="submit">
+                                <Add />
+                            </IconButton>
+                        </InputAdornment>}
+                        label="New To Do"
+                    />
+                </FormControl>
             </ListItem>
-
         </form>
     )
 }

@@ -3,14 +3,17 @@ import { List } from "@mui/material";
 import { useState } from "react";
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
+import { useEffect } from "react";
 
-export default function TodoList() {
-    const initialTodos = [
-        { id: uuid(), text: "Walk the dog", completed: false },
-        { id: uuid(), text: "Walk the cat", completed: true },
-        { id: uuid(), text: "Buy milk", completed: true },
-        { id: uuid(), text: "Get bread", completed: false }
-    ];
+const getInitData = () =>{
+    const data = JSON.parse(localStorage.getItem('todos'));
+    return data || []; 
+}
+export default function TodoList() {  
+    const [todos, setTodos] = useState(getInitData);
+    useEffect(()=>{
+        localStorage.setItem('todos',JSON.stringify(todos))
+    },[todos])
 
     const updateCompleted = (id) => {
         setTodos(curr => {
@@ -34,7 +37,6 @@ export default function TodoList() {
         })
     }
 
-    const [todos, setTodos] = useState(initialTodos);
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             {
