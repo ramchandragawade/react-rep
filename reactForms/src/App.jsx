@@ -1,5 +1,7 @@
 import './App.css'
-import BetterSignUp from './BetterSignUp'
+// import BetterSignUp from './BetterSignUp'
+// import ShopForm from './ShopForm'
+import ShopList from './ShopList'
 // import SignUpForm from './SignUpForm'
 // import UserNameForm from './UserNameForm'
 
@@ -11,7 +13,8 @@ function App() {
       <button>Submit</button> */}
       {/* <UserNameForm/> */}
       {/* <SignUpForm/> */}
-      <BetterSignUp/>
+      {/* <BetterSignUp/> */}
+      <ShopList/>
     </>
   )
 }
