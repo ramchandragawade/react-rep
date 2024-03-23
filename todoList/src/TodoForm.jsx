@@ -15,7 +15,7 @@ export default function TodoForm({addItem}){
         <form onSubmit={handleSubmit}>
             <ListItem style={{ justifyContent: "center" }}>
                 <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                    <InputLabel htmlFor="todoAdd">New To Do</InputLabel>
+                    <InputLabel htmlFor="todoAdd">Add ToDo</InputLabel>
                     <OutlinedInput
                         id="todoAdd"
                         type="text"
@@ -25,7 +25,7 @@ export default function TodoForm({addItem}){
                                 <Add />
                             </IconButton>
                         </InputAdornment>}
-                        label="New To Do"
+                        label="Add ToDo"
                     />
                 </FormControl>
             </ListItem>
