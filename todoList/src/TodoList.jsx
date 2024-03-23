@@ -2,6 +2,7 @@ import { v4 as uuid } from "uuid";
 import { List } from "@mui/material";
 import { useState } from "react";
 import TodoItem from "./TodoItem";
+import TodoForm from "./TodoForm";
 
 export default function TodoList() {
     const initialTodos = [
@@ -23,6 +24,16 @@ export default function TodoList() {
         });
     }
 
+    const addNewItem = (newText) =>{
+        setTodos(curr=>{
+            return [...curr,{
+                id: uuid(),
+                text: newText,
+                completed: false
+            }];
+        })
+    }
+
     const [todos, setTodos] = useState(initialTodos);
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
@@ -33,6 +44,7 @@ export default function TodoList() {
                     key={item.id} removeTodo={() => { removeTodo(item.id) }}
                 />)
             }
+            <TodoForm addItem={addNewItem}/>
         </List>
     )
 }
