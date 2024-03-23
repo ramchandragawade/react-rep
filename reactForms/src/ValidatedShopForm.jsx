@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { validate } from "uuid";
 function ValidatedShopForm({onSubmit}) {
     const emptyProd = {
         product: "",
@@ -40,7 +39,7 @@ function ValidatedShopForm({onSubmit}) {
         <label htmlFor="qty">Quantity: </label>
         <input type="number" placeholder="Quantity" name="qty" id="qty" onChange={handleChange} value={formData.qty}/>
         <br />
-        <button disabled={!isValid}>Submit</button>
+        <button disabled={isValid}>Submit</button>
     </form>
 }
 
