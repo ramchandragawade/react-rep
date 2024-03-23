@@ -1,4 +1,3 @@
-import { v4 as uuid } from "uuid";
 import { List } from "@mui/material";
 import { useState } from "react";
 import TodoItem from "./TodoItem";
@@ -30,7 +29,7 @@ export default function TodoList() {
     const addNewItem = (newText) =>{
         setTodos(curr=>{
             return [...curr,{
-                id: uuid(),
+                id: crypto.randomUUID(),
                 text: newText,
                 completed: false
             }];
