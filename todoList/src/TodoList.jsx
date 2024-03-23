@@ -32,7 +32,11 @@ export default function TodoList(){
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             {
-                todos.map((item) => <TodoItem item={item} updateCompleted={updateCompleted} key={item.id} removeTodo={removeTodo} />)
+                todos.map((item) => <TodoItem
+                        item={item} 
+                        updateCompleted={()=>{updateCompleted(item.id)}}
+                        key={item.id} removeTodo={()=>{removeTodo(item.id)}}
+                    />)
             }
         </List>
     )

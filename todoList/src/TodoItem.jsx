@@ -3,22 +3,16 @@ import { Delete } from "@mui/icons-material";
 
 function TodoItem({item, updateCompleted, removeTodo}){
     const labelId = `checkbox-list-label-${item.id}`;
-    const handleToggle= (id)=>{
-        updateCompleted(id);
-    }
-    const deleteItem= (id)=>{
-        removeTodo(id);
-    }
     return (
         <ListItem
         secondaryAction={
-            <IconButton edge="end" aria-label="comments" onClick={()=>{deleteItem(item.id)}}>
+            <IconButton edge="end" aria-label="comments" onClick={removeTodo}>
                 <Delete/>
             </IconButton>
         }
         disablePadding
         >
-        <ListItemButton onClick={()=>{handleToggle(item.id)}}>
+        <ListItemButton onClick={updateCompleted}>
             <ListItemIcon>
             <Checkbox
                 edge="start"
