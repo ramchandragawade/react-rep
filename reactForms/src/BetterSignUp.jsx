@@ -10,8 +10,7 @@ function BetterSignUp() {
         const fieldName = e.target.name;
         const fieldVal = e.target.value;
         setFormData(currData=>{
-            currData[fieldName] = fieldVal;
-            return {...currData};
+            return {...currData, [fieldName]: fieldVal};
         });
     }
     function handleSubmit () {
