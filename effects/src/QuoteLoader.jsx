@@ -22,7 +22,7 @@ function QuoteLoader() {
         fetchAndSetQuote();
     },[]);
     return <div>
-        <p className="Loader" style={{opacity: isLoading?1:0,transition: "0.5s"}}>Loading...</p>
+        <p className="Loader" style={{opacity: isLoading?1:0,transition: "0.5s opacity"}}>Loading...</p>
         <button onClick={fetchAndSetQuote}>Get quote</button>
         {quote.text && <div><h2>{quote.text}</h2><h3>-{quote.author}</h3></div>}
     </div>
