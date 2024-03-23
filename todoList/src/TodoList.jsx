@@ -1,4 +1,4 @@
-import { List } from "@mui/material";
+import { List,Box,Typography } from "@mui/material";
 import { useState } from "react";
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
@@ -37,15 +37,21 @@ export default function TodoList() {
     }
 
     return (
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-            {
-                todos.map((item) => <TodoItem
-                    item={item}
-                    updateCompleted={() => { updateCompleted(item.id) }}
-                    key={item.id} removeTodo={() => { removeTodo(item.id) }}
-                />)
-            }
-            <TodoForm addItem={addNewItem}/>
-        </List>
+        <Box sx={{ display:"flex", flexDirection:"column", alignItems:"center", m:3}}>
+            <Typography variant="h4" component="div" >
+                Todos
+            </Typography>
+            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                {
+                    todos.map((item) => <TodoItem
+                        item={item}
+                        updateCompleted={() => { updateCompleted(item.id) }}
+                        key={item.id} removeTodo={() => { removeTodo(item.id) }}
+                    />)
+                }
+                <TodoForm addItem={addNewItem}/>
+            </List>
+        </Box>
+        
     )
 }
