@@ -1,6 +1,7 @@
 import './App.css'
-import SignUpForm from './SignUpForm'
-import UserNameForm from './UserNameForm'
+import BetterSignUp from './BetterSignUp'
+// import SignUpForm from './SignUpForm'
+// import UserNameForm from './UserNameForm'
 
 function App() {
 
@@ -9,7 +10,8 @@ function App() {
       {/* <input type="text" />
       <button>Submit</button> */}
       {/* <UserNameForm/> */}
-      <SignUpForm/>
+      {/* <SignUpForm/> */}
+      <BetterSignUp/>
     </>
   )
 }
