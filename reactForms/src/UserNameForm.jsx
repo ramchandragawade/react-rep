@@ -6,7 +6,9 @@ function UserNameForm() {
         setUname(e.target.value);
     }
     return <div>
-        <input type="text" placeholder="Username" value={uname} onChange={updateUname}/>
+        <label htmlFor="uname">Username: </label>
+        <input type="text" id="uname" placeholder="Enter username" value={uname} onChange={updateUname}/>
+        <br />
         <button>Submit</button>
     </div>
 }
