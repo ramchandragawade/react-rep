@@ -1,17 +1,18 @@
 import { useState } from "react";
+import {v4 as uuid} from "uuid"
 import ShopForm from "./ShopForm";
 
 function ShopList(){
     const [items, setItems] = useState([{
-            id:1, product:"Banana", qty:8
+            id:uuid(), product:"Banana", qty:8
         }, {
-            id:2, product:"Milk", qty:2
+            id:uuid(), product:"Milk", qty:2
         }
     ]);
 
     function addItem (item) {
         setItems(currData=>{
-            return [...currData, {...item, id:currData.length+1}]
+            return [...currData, {...item, id:uuid()}]
         })
     }
 

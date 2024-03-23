@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 function ShopForm({onSubmit}) {
     const emptyProd = {
         product: "",
