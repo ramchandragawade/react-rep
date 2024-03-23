@@ -5,11 +5,6 @@ function TodoItem({ item, updateCompleted, removeTodo }) {
     const labelId = `checkbox-list-label-${item.id}`;
     return (
         <ListItem
-            secondaryAction={
-                <IconButton edge="end" aria-label="comments" onClick={removeTodo}>
-                    <Delete />
-                </IconButton>
-            }
             disablePadding
         >
             <ListItemButton onClick={updateCompleted}>
@@ -24,6 +19,9 @@ function TodoItem({ item, updateCompleted, removeTodo }) {
                 </ListItemIcon>
                 <ListItemText id={labelId} primary={item.text} />
             </ListItemButton>
+            <IconButton edge="end" aria-label="comments" onClick={removeTodo}>
+                <Delete />
+            </IconButton>
         </ListItem>
     );
 }
