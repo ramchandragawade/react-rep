@@ -1,5 +1,6 @@
 import './App.css'
-import QuoteLoader from './QuoteLoader'
+import ProfileViewer from './ProfileViewer'
+// import QuoteLoader from './QuoteLoader'
 // import RandomQuote from './RandomQuote'
 // import Counter from './Counter'
 
@@ -9,7 +10,8 @@ function App() {
     <>
       {/* <Counter/> */}
       {/* <RandomQuote/> */}
-      <QuoteLoader/>
+      {/* <QuoteLoader/> */}
+      <ProfileViewer/>
     </>
   )
 }
