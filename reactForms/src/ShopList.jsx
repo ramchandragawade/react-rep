@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {v4 as uuid} from "uuid"
-import ShopForm from "./ShopForm";
+// import ShopForm from "./ShopForm";
+import ValidatedShopForm from "./ValidatedShopForm";
 
 function ShopList(){
     const [items, setItems] = useState([{
@@ -21,8 +22,7 @@ function ShopList(){
         <ul>
             {items.map(i=><li key={i.id}>{i.product} - {i.qty}</li>)}
         </ul>
-
-        <ShopForm onSubmit={addItem}/>
+        <ValidatedShopForm onSubmit={addItem}/>
     </div>
 }
 
